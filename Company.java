@@ -31,8 +31,14 @@ public class Company {
     }
 
     public void raiseSalary(int percentage) {
-        
+        Employee mostTasks = null;
+        for (Employee employee : allEmployees) {
+                if (mostTasks == null || employee.getAssignedTasksNum() < mostTasks.getAssignedTasksNum()){
+                    mostTasks = employee;
+                }
+            }
+            int mostTasksSalary = mostTasks.getSalary();
+            int newSalary = Math.round(mostTasksSalary * (1 + (percentage/100)));
+            mostTasks.setSalary(newSalary);
     }
-
-
 }
