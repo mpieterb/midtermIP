@@ -13,8 +13,7 @@ public class Employee {
         this.salary = salary;
         this.departmentId = departmentId;
         totalProcessed = 0;
-        List<String> assignedTasks = new ArrayList<>();
-        assignedTasks = null;
+        assignedTasks = new ArrayList<>();
     } 
 
     public int getDepartmentId() {
@@ -33,8 +32,8 @@ public class Employee {
         return assignedTasks.size();
     }
 
-    public int setSalary(int newSalary) {
-        return salary = newSalary;
+    public void setSalary(int newSalary) {
+        this.salary = newSalary;
     }
 
     public void processTask() { //removes this task from the list, and increases the value of totalProcessedby one)
@@ -57,19 +56,45 @@ public class Employee {
         Employee inge = new Employee("Inge", 195, 55);
         Employee jakob = new Employee("Jakob", 160, 55);
         Employee peter = new Employee("Peter", 120, 55);
+        
+        Company ITU = new Company();
+        ITU.addEmployee(inge, 150);
+        ITU.addEmployee(jakob, 130);
+        ITU.addEmployee(peter, 140);
 
-        // inge.addTask("DO SOMETHING");
-        // peter.addTask("DO SOMETHING");
-        // jakob.addTask("DO SOMETHING");
+        inge.addTask("DO SOMETHING");
+        inge.addTask("DO SOMETHING");
+        inge.addTask("DO SOMETHING");
+        peter.addTask("DO SOMETHING");
+        peter.addTask("DO SOMETHING");
+        jakob.addTask("DO SOMETHING");
+        jakob.addTask("DO SOMETHING");
+        jakob.addTask("DO SOMETHING");
+        jakob.addTask("DO SOMETHING");
+        
+        int jakobTasks = jakob.getAssignedTasksNum();
+        int peterTasks = peter.getAssignedTasksNum();
+        int ingeTasks = inge.getAssignedTasksNum();
+
+        System.out.println(ingeTasks);
+        System.out.println(peterTasks);
+        System.out.println(jakobTasks);
      
         
-        // Company ITU = new Company();
-        // ITU.addEmployee(inge, 150);
-        // ITU.addEmployee(jakob, 130);
-        // ITU.addEmployee(peter, 140);
 
-        // Employee leastbusy = ITU.findLeastBusy(55);
-        // System.out.println(leastbusy);
+        Employee leastbusy = ITU.findLeastBusy(55);
+        System.out.println(leastbusy);
+
+        ITU.raiseSalary(30);
+
+        int ingeSalary = inge.getSalary();
+        int jakobSalary = jakob.getSalary();
+        int peterSalary = peter.getSalary();
+
+        System.out.println(ingeSalary);
+        System.out.println(peterSalary);
+        System.out.println(jakobSalary);
+
 
 
     }
