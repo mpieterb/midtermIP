@@ -53,18 +53,18 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Employee inge = new Employee("Inge", 195, 55);
+        Employee birk = new Employee("Birk", 195, 55);
         Employee jakob = new Employee("Jakob", 160, 55);
         Employee peter = new Employee("Peter", 120, 55);
         
         Company ITU = new Company();
-        ITU.addEmployee(inge, 150);
+        ITU.addEmployee(birk, 150);
         ITU.addEmployee(jakob, 130);
         ITU.addEmployee(peter, 140);
 
-        inge.addTask("DO SOMETHING");
-        inge.addTask("DO SOMETHING");
-        inge.addTask("DO SOMETHING");
+        birk.addTask("DO SOMETHING");
+        birk.addTask("DO SOMETHING");
+        birk.addTask("DO SOMETHING");
         peter.addTask("DO SOMETHING");
         peter.addTask("DO SOMETHING");
         jakob.addTask("DO SOMETHING");
@@ -74,9 +74,9 @@ public class Employee {
         
         int jakobTasks = jakob.getAssignedTasksNum();
         int peterTasks = peter.getAssignedTasksNum();
-        int ingeTasks = inge.getAssignedTasksNum();
+        int birkTasks = birk.getAssignedTasksNum();
 
-        System.out.println(ingeTasks);
+        System.out.println(birkTasks);
         System.out.println(peterTasks);
         System.out.println(jakobTasks);
      
@@ -87,11 +87,11 @@ public class Employee {
 
         ITU.raiseSalary(30);
 
-        int ingeSalary = inge.getSalary();
+        int birkSalary = birk.getSalary();
         int jakobSalary = jakob.getSalary();
         int peterSalary = peter.getSalary();
 
-        System.out.println(ingeSalary);
+        System.out.println(birkSalary);
         System.out.println(peterSalary);
         System.out.println(jakobSalary);
 
