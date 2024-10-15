@@ -37,7 +37,7 @@ public class Employee {
     }
 
     public void processTask() { //removes this task from the list, and increases the value of totalProcessedby one)
-        if (!assignedTasks.isEmpty()) {
+        if (!assignedTasks.isEmpty()) { // can you also use this method? Why not?
             System.out.println("processing task " + assignedTasks.get(0)); 
             assignedTasks.remove(0);
             totalProcessed++;

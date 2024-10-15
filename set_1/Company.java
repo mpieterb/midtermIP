@@ -38,8 +38,7 @@ public class Company {
                     mostTasks = employee;
                 }
             }
-            int mostTasksSalary = mostTasks.getSalary();
-            int newSalary = (int) Math.round(mostTasksSalary * (1 + (percentage/100.0)));
+            int newSalary = (int) Math.round(mostTasks.getSalary() * (1 + (percentage/100.0)));
             mostTasks.setSalary(newSalary);
     }
 }
